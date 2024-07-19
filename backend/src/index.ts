@@ -14,5 +14,5 @@ ws.on('message',function message(data,isbinary){
   })
 
 }) 
-ws.send('hello msg from server!') 
+
  })
