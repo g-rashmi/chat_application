@@ -1,0 +1,23 @@
+
+version: '3.8'
+services :
+  backend:
+    build :
+      context: ./backend
+      dockerfile: dockerfile
+    ports:
+      - "300:300"
+    volumes:
+      - ./backend:/app
+    command: ["node", "dist/index.js"]
+
+  frontend:
+      build:
+       context: ./frontend
+       dockerfile: dockerfile
+      ports:
+      - "5173:5173"
+      volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/index.html:/app/index.html
+      command: npm run dev -- --host
