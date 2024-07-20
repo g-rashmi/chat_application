@@ -6,7 +6,7 @@ function App() {
   const [val, setValue] = useState("");
 
   useEffect(() => {
-    const newSocket = new WebSocket(import.meta.env.VITE_APP_BACKEND||'ws://localhost:300');
+    const newSocket = new WebSocket('wss://chat-application-gvfr.onrender.com'||'ws://localhost:300');
     setSocket(newSocket);
 
     newSocket.onopen = () => {
