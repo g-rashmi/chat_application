@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 function App() { 
   const [socket, setSocket] = useState<WebSocket | null>(null); 
+  
   const [receive, setReceive] = useState<string[]>([]); 
   const [val, setValue] = useState("");
 
